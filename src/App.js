@@ -10,17 +10,17 @@ import "./index.css";
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
-
-  // --- Input-Filter ----
   const [query, setQuery] = useState("");
-
+ 
+  // --- Input-Filter ----
   const handleInputChange = (event) => {
     setQuery(event.target.value);
   };
 
-  const filteredItems = products.filter(
-    (product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1
-  );
+  const filteredItems = products.filter
+  ((product) => product.title.toLowerCase().indexOf(query.toLowerCase()) !==
+    -1
+    );
 
   // --- Radio-Filtering ----
   const handleChange = (event) => {
